@@ -21,8 +21,8 @@
     "outputName": "jest-junit.xml",
     "ancestorSeparator": " › ",
     "uniqueOutputName": "false",
-    "suiteNameTemplate": "{filepath}",
-    "classNameTemplate": "{classname}",
-    "titleTemplate": "{title}"
+    "suiteNameTemplate": "math.test.js",
+    "classNameTemplate": "math",
+    "titleTemplate": "Test"
   }
 }
