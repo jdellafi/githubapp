@@ -11,8 +11,7 @@
   "license": "ISC",
   "devDependencies": {
     "jest": "^29.5.0",
-    "jest-junit": "^15.0.0",
-    "jest-junit-reporter": "^1.1.0"
+    "jest-junit": "^15.0.0"
   },
   "jest": {
     "reporters": [
@@ -22,7 +21,7 @@
   },
   "jest-junit": {
     "suiteName": "jest tests",
-    "outputDirectory": "reports",
+    "outputDirectory": ".",
     "outputName": "jest-junit.xml",
     "uniqueOutputName": "false",
     "classNameTemplate": "{classname}-{title}",
