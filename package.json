@@ -9,8 +9,17 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "jest": "^29.0.3",
+  "devDependencies": {
+    "jest": "^29.5.0",
     "jest-junit-reporter": "^1.1.0"
+  },
+  "jest-junit": {
+    "outputDirectory": "reports",
+    "outputName": "jest-junit.xml",
+    // "ancestorSeparator": " › ",
+    // "uniqueOutputName": "false",
+    // "suiteNameTemplate": "{filepath}",
+    // "classNameTemplate": "{classname}",
+    // "titleTemplate": "{title}"
   }
 }
