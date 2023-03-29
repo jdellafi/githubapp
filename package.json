@@ -11,18 +11,23 @@
   "license": "ISC",
   "devDependencies": {
     "jest": "^29.5.0",
+    "jest-junit": "^15.0.0",
     "jest-junit-reporter": "^1.1.0"
   },
   "jest": {
-    "testResultsProcessor": "./node_modules/jest-junit-reporter"
+    "reporters": [
+      "default",
+      "jest-junit"
+    ]
   },
   "jest-junit": {
+    "suiteName": "jest tests",
     "outputDirectory": "reports",
     "outputName": "jest-junit.xml",
-    "ancestorSeparator": " › ",
     "uniqueOutputName": "false",
-    "suiteNameTemplate": "math.test.js",
-    "classNameTemplate": "math",
-    "titleTemplate": "Test"
+    "classNameTemplate": "{classname}-{title}",
+    "titleTemplate": "{classname}-{title}",
+    "ancestorSeparator": " › ",
+    "usePathForSuiteName": "true"
   }
 }
