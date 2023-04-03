@@ -48,7 +48,7 @@ jobs:
         if: success() || failure()        # run this step even if previous step failed
         with:
           name: coverage-report
-          path: coverage/Icov-report/index.html 
+          path: coverage/
 
       - name: Test Report
         uses: dorny/test-reporter@v1.6.0
