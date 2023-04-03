@@ -41,9 +41,18 @@ jobs:
         run: npm ci
       - name: tests
         run: npm test
+      - name: coverage
+        run: npm test -- --coverage
+      
+      - uses: actions/upload-artifact@v2  # upload test results
+        if: success() || failure()        # run this step even if previous step failed
+        with:
+          name: coverage-report
+          path: coverage/
 
       - name: Test Report
         uses: dorny/test-reporter@v1.6.0
+        #if: github.repository == 'octo-org/octo-repo-prod'
         if: success() || failure()    # run this step even if previous step failed
         with:
           name: JEST Tests            # Name of the check run which will be created
